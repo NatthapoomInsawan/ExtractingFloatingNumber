@@ -11,8 +11,9 @@ namespace MyApp
         {
             int dividend;
             int divisor;
+            int precision;
 
-            Console.WriteLine("This program return the value of 10000th precision of x/y.");
+            Console.WriteLine("This program return the value of Nth precision of x/y.");
 
             Console.WriteLine("Please enter your dividend");
             Int32.TryParse(Console.ReadLine(), out dividend);
@@ -20,7 +21,10 @@ namespace MyApp
             Console.WriteLine("Please enter your divisor (cannot be zero)");
             Int32.TryParse(Console.ReadLine(), out divisor);
 
-            var result = FindNthPrecision(dividend, divisor, 10000);
+            Console.WriteLine("Please enter your target floating number precision");
+            Int32.TryParse(Console.ReadLine(), out precision);
+
+            var result = FindNthPrecision(dividend, divisor, precision);
             Console.WriteLine($"Result: {result}");
         }
 
