@@ -26,6 +26,7 @@ namespace MyApp
 
             var result = FindNthPrecision(dividend, divisor, precision);
             Console.WriteLine($"Result: {result}");
+            Console.ReadLine();
         }
 
         static int FindNthPrecision(int _dividend, int _divisor, int _precision)
